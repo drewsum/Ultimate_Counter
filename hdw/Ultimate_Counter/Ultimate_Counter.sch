@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:Ultimate_Counter-cache
 EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 10
+Sheet 1 13
 Title "Incrementor"
 Date "2019-09-03"
 Rev "A"
@@ -81,4 +82,28 @@ Text Notes 3830 920  0    250  ~ 50
 The Incrementor
 Text Notes 1180 1130 0    100  ~ 20
 01. Table of Contents
+$Sheet
+S 4050 3780 500  150 
+U 5E008542
+F0 "Stage 01" 50
+F1 "Stage01.sch" 50
+$EndSheet
+$Sheet
+S 4050 4130 500  150 
+U 5E074B04
+F0 "Stage 02" 50
+F1 "Stage02.sch" 50
+$EndSheet
+$Sheet
+S 4050 4480 500  150 
+U 5E07AE3E
+F0 "Stage 03" 50
+F1 "Stage03.sch" 50
+$EndSheet
+$Sheet
+S 4050 4830 500  150 
+U 5E0816E2
+F0 "Stage 04" 50
+F1 "Stage04.sch" 50
+$EndSheet
 $EndSCHEMATC
