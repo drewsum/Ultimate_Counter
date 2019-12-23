@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 5 13
+Sheet 5 14
 Title "Incrementor"
 Date "2019-09-03"
 Rev "A"
@@ -74,25 +74,6 @@ $EndComp
 Wire Wire Line
 	3120 1510 3120 1610
 $Comp
-L Custom_Library:C_Custom C?
-U 1 1 5D78E18D
-P 2160 1580
-AR Path="/5D6B2673/5D78E18D" Ref="C?"  Part="1" 
-AR Path="/5D784813/5D78E18D" Ref="C?"  Part="1" 
-AR Path="/5D6C2755/5D78E18D" Ref="C?"  Part="1" 
-AR Path="/5D73948C/5D78E18D" Ref="C?"  Part="1" 
-F 0 "C?" H 2185 1680 50  0000 L CNN
-F 1 "0.1uF" H 2185 1480 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 2198 1430 50  0001 C CNN
-F 3 "" H 2185 1680 50  0001 C CNN
-F 4 "0603" H 2010 1680 50  0000 R CNN "display_footprint"
-F 5 "50V" H 2010 1580 50  0000 R CNN "Voltage"
-F 6 "X7R" H 2010 1480 50  0000 R CNN "Dielectric"
-F 7 "311-1344-1-ND" H 2585 2080 60  0001 C CNN "Digi-Key PN"
-	1    2160 1580
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5D78E193
 P 2160 1730
@@ -103,8 +84,6 @@ F 3 "" H 2160 1730 50  0001 C CNN
 	1    2160 1730
 	1    0    0    -1  
 $EndComp
-Text Notes 1730 1240 0    50   ~ 0
-Figure out +12V PGOOD
 $Comp
 L Custom_Library:74LVC1G06_Power U?
 U 1 1 5DFFDA78
@@ -229,4 +208,111 @@ F 3 "" H 4840 1950 50  0001 C CNN
 $EndComp
 Text GLabel 4540 2050 0    50   Input ~ 0
 POS3P3_PGOOD
+$Comp
+L Regulator_Linear:TPS71533__SC70 U?
+U 1 1 5E00BE7D
+P 1610 1130
+F 0 "U?" H 1460 1255 50  0000 C CNN
+F 1 "TPS71533" H 1610 1255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-353_SC-70-5" H 1610 1355 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tps715.pdf" H 1310 1930 50  0001 C CNN
+F 4 "296-12008-1-ND" H 1610 1130 50  0001 C CNN "Digi-Key PN"
+	1    1610 1130
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5E01095E
+P 2160 1580
+AR Path="/5C1D5CD8/5E01095E" Ref="C?"  Part="1" 
+AR Path="/5C1D5CCA/5E01095E" Ref="C?"  Part="1" 
+AR Path="/5C26E09A/5E01095E" Ref="C?"  Part="1" 
+AR Path="/5D739492/5E01095E" Ref="C?"  Part="1" 
+AR Path="/5D73948C/5E01095E" Ref="C?"  Part="1" 
+F 0 "C?" H 2185 1680 50  0000 L CNN
+F 1 "10uF" H 2185 1480 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2198 1430 50  0001 C CNN
+F 3 "" H 2185 1680 50  0001 C CNN
+F 4 "490-14372-1-ND" H 2585 2080 60  0001 C CNN "Digi-Key PN"
+F 5 "0603" H 2010 1680 50  0000 R CNN "display_footprint"
+F 6 "10V" H 2010 1580 50  0000 R CNN "Voltage"
+F 7 "X5R" H 2010 1480 50  0000 R CNN "Dielectric"
+	1    2160 1580
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E0136C2
+P 1610 1430
+F 0 "#PWR?" H 1610 1180 50  0001 C CNN
+F 1 "GND" H 1610 1280 50  0000 C CNN
+F 2 "" H 1610 1430 50  0001 C CNN
+F 3 "" H 1610 1430 50  0001 C CNN
+	1    1610 1430
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1910 1130 2160 1130
+Wire Wire Line
+	3120 1130 3120 1210
+Wire Wire Line
+	2160 1430 2160 1130
+Connection ~ 2160 1130
+Wire Wire Line
+	2160 1130 2590 1130
+Wire Wire Line
+	2590 1950 2590 1130
+Connection ~ 2590 1130
+Wire Wire Line
+	2590 1130 3120 1130
+$Comp
+L Custom_Library:C_Custom C?
+U 1 1 5E016629
+P 1020 1360
+AR Path="/5D6B2673/5E016629" Ref="C?"  Part="1" 
+AR Path="/5D784813/5E016629" Ref="C?"  Part="1" 
+AR Path="/5D6C2755/5E016629" Ref="C?"  Part="1" 
+AR Path="/5D73948C/5E016629" Ref="C?"  Part="1" 
+F 0 "C?" H 1045 1460 50  0000 L CNN
+F 1 "0.1uF" H 1045 1260 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1058 1210 50  0001 C CNN
+F 3 "" H 1045 1460 50  0001 C CNN
+F 4 "0603" H 870 1460 50  0000 R CNN "display_footprint"
+F 5 "50V" H 870 1360 50  0000 R CNN "Voltage"
+F 6 "X7R" H 870 1260 50  0000 R CNN "Dielectric"
+F 7 "311-1344-1-ND" H 1445 1860 60  0001 C CNN "Digi-Key PN"
+	1    1020 1360
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E01662F
+P 1020 1510
+F 0 "#PWR?" H 1020 1260 50  0001 C CNN
+F 1 "GND" H 1020 1360 50  0000 C CNN
+F 2 "" H 1020 1510 50  0001 C CNN
+F 3 "" H 1020 1510 50  0001 C CNN
+	1    1020 1510
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1310 1130 1020 1130
+Wire Wire Line
+	1020 1130 1020 1210
+$Comp
+L power:+12V #PWR?
+U 1 1 5E016A41
+P 1020 1050
+F 0 "#PWR?" H 1020 900 50  0001 C CNN
+F 1 "+12V" H 1020 1190 50  0000 C CNN
+F 2 "" H 1020 1050 50  0001 C CNN
+F 3 "" H 1020 1050 50  0001 C CNN
+	1    1020 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1020 1050 1020 1130
+Connection ~ 1020 1130
+Text GLabel 2290 2050 0    50   Input ~ 0
+POS12_PGOOD
 $EndSCHEMATC

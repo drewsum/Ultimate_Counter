@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 13
+Sheet 1 14
 Title "Incrementor"
 Date "2019-09-03"
 Rev "A"
@@ -105,5 +105,11 @@ S 4050 4830 500  150
 U 5E0816E2
 F0 "Stage 04" 50
 F1 "Stage04.sch" 50
+$EndSheet
+$Sheet
+S 4050 5180 500  150 
+U 5E018A25
+F0 "LED Current Sink" 50
+F1 "LED_Current_Sink.sch" 50
 $EndSheet
 $EndSCHEMATC

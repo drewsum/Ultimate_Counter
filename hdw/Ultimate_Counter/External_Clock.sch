@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 7 13
+Sheet 7 14
 Title "Incrementor"
 Date "2019-09-03"
 Rev "A"
@@ -14,33 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Connector_Generic:Conn_01x02 J?
-U 1 1 5D747076
-P 3590 3400
-F 0 "J?" H 3590 3500 50  0000 C CNN
-F 1 "CLK_IN" H 3590 3200 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Angled_1x02_Pitch2.54mm" H 3590 3400 50  0001 C CNN
-F 3 "~" H 3590 3400 50  0001 C CNN
-F 4 "SAM1225-02-ND" H 3590 3400 50  0001 C CNN "Digi-Key PN"
-	1    3590 3400
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5D74741D
-P 3870 3580
-F 0 "#PWR?" H 3870 3330 50  0001 C CNN
-F 1 "GND" H 3870 3430 50  0000 C CNN
-F 2 "" H 3870 3580 50  0001 C CNN
-F 3 "" H 3870 3580 50  0001 C CNN
-	1    3870 3580
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3870 3580 3870 3500
-Wire Wire Line
-	3870 3500 3790 3500
 $Comp
 L Custom_Library:R_Custom R?
 U 1 1 5D7487B1
@@ -210,8 +183,162 @@ F 3 "" H 6710 3940 50  0001 C CNN
 	1    6710 3940
 	1    0    0    -1  
 $EndComp
-Text GLabel 6800 3400 2    50   Output ~ 0
+Text GLabel 8010 3400 2    50   Output ~ 0
 External_Clock
+$Comp
+L Custom_Library:R_Custom R?
+U 1 1 5E00021A
+P 7210 3740
+AR Path="/5D6B2673/5E00021A" Ref="R?"  Part="1" 
+AR Path="/5D73A07C/5E00021A" Ref="R?"  Part="1" 
+F 0 "R?" H 7310 3900 50  0000 L CNN
+F 1 "10k" V 7210 3670 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" H 7210 3740 50  0001 C CNN
+F 3 "" H 7210 3740 50  0001 C CNN
+F 4 "0603" H 7310 3810 50  0000 L CNN "display_footprint"
+F 5 "1%" H 7310 3710 50  0000 L CNN "Tolerance"
+F 6 "1/10W" H 7310 3610 50  0000 L CNN "Wattage"
+F 7 "RMCF0603FT10K0CT-ND" H 7510 4140 60  0001 C CNN "Digi-Key PN"
+	1    7210 3740
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	3790 3400 4610 3400
+	7210 3400 6800 3400
+Wire Wire Line
+	7210 3590 7210 3400
+Connection ~ 7210 3400
+$Comp
+L Custom_Library:R_Custom R?
+U 1 1 5E000228
+P 7860 3400
+F 0 "R?" V 7760 3400 50  0000 C CNN
+F 1 "100" V 7860 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 7860 3400 50  0001 C CNN
+F 3 "" H 7860 3400 50  0001 C CNN
+F 4 "0603" V 7960 3400 50  0000 C CNN "display_footprint"
+F 5 "1%" V 8060 3400 50  0000 C CNN "Tolerance"
+F 6 "1/10W" V 8160 3400 50  0000 C CNN "Wattage"
+F 7 "RMCF0603FT100RCT-ND" H 8160 3800 60  0001 C CNN "Digi-Key PN"
+	1    7860 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7710 3400 7210 3400
+$Comp
+L power:GND #PWR?
+U 1 1 5E000838
+P 7210 3890
+AR Path="/5D6B2673/5E000838" Ref="#PWR?"  Part="1" 
+AR Path="/5D73A07C/5E000838" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7210 3640 50  0001 C CNN
+F 1 "GND" H 7210 3740 50  0000 C CNN
+F 2 "" H 7210 3890 50  0001 C CNN
+F 3 "" H 7210 3890 50  0001 C CNN
+	1    7210 3890
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E026B84
+P 2500 3780
+AR Path="/5D73A07C/5E026B84" Ref="#PWR?"  Part="1" 
+AR Path="/5D7790AC/5E026B84" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2500 3530 50  0001 C CNN
+F 1 "GND" H 2500 3630 50  0000 C CNN
+F 2 "" H 2500 3780 50  0001 C CNN
+F 3 "" H 2500 3780 50  0001 C CNN
+	1    2500 3780
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3780 2500 3700
+Wire Wire Line
+	2500 3700 2420 3700
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 5E026B8C
+P 2220 3500
+AR Path="/5D7790AC/5E026B8C" Ref="J?"  Part="1" 
+AR Path="/5D73A07C/5E026B8C" Ref="J?"  Part="1" 
+F 0 "J?" H 2300 3500 50  0000 L CNN
+F 1 "Signal_Input" H 2300 3400 50  0000 L CNN
+F 2 "" H 2220 3500 50  0001 C CNN
+F 3 "~" H 2220 3500 50  0001 C CNN
+	1    2220 3500
+	-1   0    0    -1  
+$EndComp
+Text GLabel 3910 3500 2    50   Input ~ 0
+Count_Reset
+$Comp
+L Device:D_TVS_ALT D?
+U 1 1 5E026B94
+P 3080 3830
+AR Path="/5D73A07C/5E026B94" Ref="D?"  Part="1" 
+AR Path="/5D7790AC/5E026B94" Ref="D?"  Part="1" 
+F 0 "D?" V 3000 3910 50  0000 L CNN
+F 1 "3.3V" V 3100 3910 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-323" H 3080 3830 50  0001 C CNN
+F 3 "~" H 3080 3830 50  0001 C CNN
+F 4 "CDSOD323-T03SCT-ND" H 3080 3830 50  0001 C CNN "Digi-Key PN"
+	1    3080 3830
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E026B9A
+P 3080 3980
+AR Path="/5D73A07C/5E026B9A" Ref="#PWR?"  Part="1" 
+AR Path="/5D7790AC/5E026B9A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3080 3730 50  0001 C CNN
+F 1 "GND" H 3080 3830 50  0000 C CNN
+F 2 "" H 3080 3980 50  0001 C CNN
+F 3 "" H 3080 3980 50  0001 C CNN
+	1    3080 3980
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_TVS_ALT D?
+U 1 1 5E026BA1
+P 3580 3830
+AR Path="/5D73A07C/5E026BA1" Ref="D?"  Part="1" 
+AR Path="/5D7790AC/5E026BA1" Ref="D?"  Part="1" 
+F 0 "D?" V 3500 3910 50  0000 L CNN
+F 1 "3.3V" V 3600 3910 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-323" H 3580 3830 50  0001 C CNN
+F 3 "~" H 3580 3830 50  0001 C CNN
+F 4 "CDSOD323-T03SCT-ND" H 3580 3830 50  0001 C CNN "Digi-Key PN"
+	1    3580 3830
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E026BA7
+P 3580 3980
+AR Path="/5D73A07C/5E026BA7" Ref="#PWR?"  Part="1" 
+AR Path="/5D7790AC/5E026BA7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3580 3730 50  0001 C CNN
+F 1 "GND" H 3580 3830 50  0000 C CNN
+F 2 "" H 3580 3980 50  0001 C CNN
+F 3 "" H 3580 3980 50  0001 C CNN
+	1    3580 3980
+	-1   0    0    -1  
+$EndComp
+Text GLabel 3910 3600 2    50   Input ~ 0
+LED_Enable
+Wire Wire Line
+	3910 3500 3580 3500
+Wire Wire Line
+	3910 3600 3080 3600
+Wire Wire Line
+	3580 3680 3580 3500
+Connection ~ 3580 3500
+Wire Wire Line
+	3580 3500 2420 3500
+Wire Wire Line
+	3080 3680 3080 3600
+Connection ~ 3080 3600
+Wire Wire Line
+	3080 3600 2420 3600
+Wire Wire Line
+	4610 3400 2420 3400
 $EndSCHEMATC
